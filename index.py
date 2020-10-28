@@ -40,6 +40,6 @@ elif dimension == "2D":
 
         states = ca.run(n_steps,p_init = p_init,init_size = size)
         states.transform(only_alive = persistence,resize = (400,400),method = "nearest")
-        filepath = states.save_video(fps = fps)
+        filepath = states.save_video("streamlit_capture.mp4",fps = fps)
 
         st.video(filepath)
